@@ -7,7 +7,8 @@ const mealDetailsContent = document.getElementById("meal-details-content");
 const getMealList = () => {
   let searchInputValue = document.getElementById("search-input").value.trim();
   fetch(
-    `https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputValue}`
+    `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInputValue}`
+    // i have used search query
   )
     .then((res) => res.json())
     .then((data) => {
