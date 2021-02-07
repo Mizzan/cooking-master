@@ -82,16 +82,6 @@ const mealRecipeContainer = (meal) => {
   mealDetailsContent.parentElement.classList.add("showRecipe");
 };
 
-function showIngredient(meal) {
-  const p = document.createElement("p");
-  for (let i = 0; i < meal.length; i++) {
-    const element = meal[i];
-    console.log(element);
-    const ingredient = element.strIngredient;
-    p.innerText = ingredient;
-  }
-}
-
 // event listener
 searchBtn.addEventListener("click", getMealList);
 recipeBtn.addEventListener("click", getMealRecipe);
